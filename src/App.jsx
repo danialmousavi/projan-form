@@ -6,6 +6,8 @@ export default function App() {
   const [serial,setSerial]=useState("");
   const [amount,setAmount]=useState("");
   const [date,setDate]=useState("");
+  const [allDatas,setAllDatas]=useState([]);
+  const [rerenderComp,]=useState(0);
   return (
     <>
     <FormContext.Provider value={{
@@ -14,7 +16,10 @@ export default function App() {
       amount,
       setAmount,
       date,
-      setDate
+      setDate,
+      allDatas,
+      setAllDatas,
+
     }}>
       <div className='container'>
         <div className='row'>
