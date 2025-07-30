@@ -13,12 +13,8 @@ export default function FormComponent() {
             initialValues={{ serial: '', amount: '', date: '' }}
             validationSchema={FormValidationSchema}
             onSubmit={(values, { setSubmitting }) => {
-                // console.log('Form data', values);
-                setSubmitting(false); 
-                // contextform.setSerial(values.serial);
-                // contextform.setAmount(values.amount);
-                // contextform.setDate(values.date);
-                contextform.allDatas=([...contextform.allDatas, values]);
+            setSubmitting(false);
+            contextform.setAllDatas([...contextform.allDatas, values]);
             }}
 
         >
